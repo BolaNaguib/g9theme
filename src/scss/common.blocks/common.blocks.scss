@@ -2,3 +2,20 @@
 @import "section/section";
 @import "section/_theme/section_theme_midnight";
 @import "section/_theme/section_theme_sunflower";
+@import "section/_theme/section_theme_white";
+@import "section/__title/section__title";
+
+//card
+@import "card/_type/card_type_media";
+
+//hr
+@import "hr/_theme/hr_theme_sunflower";
+@import "hr/_theme/hr_theme_midnight";
+@import "hr/_type/hr_type_section";
+
+//blockquote
+@import "blockquote/blockquote";
+
+//footer
+@import "footer/__link/footer__link";
+@import "footer/__link/_type/footer__link_type_city";

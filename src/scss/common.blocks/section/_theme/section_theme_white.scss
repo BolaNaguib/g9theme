@@ -1,3 +1,6 @@
 .section_theme_white{
   color: $color__midnight_3;
+  & .icon{
+    filter: brightness(0);
+  }
 }

@@ -1,0 +1,19 @@
+.hr_theme_midnight{
+  color:  $color__midnight;
+  border-color:  $color__midnight;
+}
+
+@for $i from 1 through length($color__midnight_list_dark) {
+  .hr_theme_midnight_#{$i} {
+    color: nth($color__midnight_list_dark, $i);
+    border-color:nth($color__midnight_list_dark, $i);
+  }
+}
+
+@for $i from 1 through length($color__midnight_list_light) {
+  $y: $i+7;
+  .hr_theme_midnight_#{$y} {
+    color: nth($color__midnight_list_light, $i);
+    border-color: nth($color__midnight_list_light, $i);
+  }
+}
