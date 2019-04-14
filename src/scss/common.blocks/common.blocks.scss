@@ -1,3 +1,10 @@
+//navbar
+@import "nav/_theme/nav_theme_midnight";
+@import "nav/_theme/nav_theme_sunflower";
+@import "nav/_theme/nav_theme_white";
+@import "nav/__link/nav__link";
+@import "nav/__link/_type/nav__link_type_city";
+
 // section
 @import "section/section";
 @import "section/_theme/section_theme_midnight";
@@ -19,3 +26,9 @@
 //footer
 @import "footer/__link/footer__link";
 @import "footer/__link/_type/footer__link_type_city";
+
+//slider
+@import "slider/slider";
+
+//hero
+@import "hero/__title/hero__title";

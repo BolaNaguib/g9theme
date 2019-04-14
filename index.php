@@ -79,7 +79,78 @@
     </div>
   </div>
 </section>
+<section class="section section_theme_midnight">
+  <div class="uk-container">
+    <div class="uk-child-width-1-4" uk-grid>
+      <div class="uk-text-center">
+        <h1><i class="fas fa-dollar-sign"></i></h1>
+        <h5>Best Price Guaranteed</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="far fa-clock"></i></h1>
+        <h5>24/7 Emergency Service</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="far fa-smile"></i></h1>
+        <h5>Satisfaction Guarantee</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="fas fa-flag-usa"></i></h1>
+        <h5>American Made</h5>
+      </div>
 
+
+    </div>
+  </div>
+</section>
+<section class="section section_theme_sunflower">
+  <div class="uk-container">
+    <div class="uk-child-width-1-4" uk-grid>
+      <div class="uk-text-center">
+        <h1><i class="fas fa-dollar-sign"></i></h1>
+        <h5>Best Price Guaranteed</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="far fa-clock"></i></h1>
+        <h5>24/7 Emergency Service</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="far fa-smile"></i></h1>
+        <h5>Satisfaction Guarantee</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="fas fa-flag-usa"></i></h1>
+        <h5>American Made</h5>
+      </div>
+
+
+    </div>
+  </div>
+</section>
+<section class="section section_theme_white">
+  <div class="uk-container">
+    <div class="uk-child-width-1-4" uk-grid>
+      <div class="uk-text-center">
+        <h1><i class="fas fa-dollar-sign"></i></h1>
+        <h5>Best Price Guaranteed</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="far fa-clock"></i></h1>
+        <h5>24/7 Emergency Service</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="far fa-smile"></i></h1>
+        <h5>Satisfaction Guarantee</h5>
+      </div>
+      <div class="uk-text-center">
+        <h1><i class="fas fa-flag-usa"></i></h1>
+        <h5>American Made</h5>
+      </div>
+
+
+    </div>
+  </div>
+</section>
 <section class="section section_theme_midnight">
   <div class="uk-container">
     <div class="uk-child-width-1-6 " uk-grid>
@@ -328,13 +399,19 @@
 </section>
 
 <section class="section section_theme_midnight">
-  <div class="uk-container">
+  <div class="uk-container uk-text-center">
     <h3> Get a Free Quote Now from <a href="#"> Garage Doors Tech</a> Or Call <a href="#">[+123456789]</a></h3>
 
   </div>
 </section>
+<section class="section section_theme_sunflower">
+  <div class="uk-container uk-text-center">
+
+    <h3> Get a Free Quote Now from <a href="#"> Garage Doors Tech</a> Or Call <a href="#">[+123456789]</a></h3>
+  </div>
+</section>
 <section class="section section_theme_white">
-  <div class="uk-container">
+  <div class="uk-container uk-text-center">
 
     <h3> Get a Free Quote Now from <a href="#"> Garage Doors Tech</a> Or Call <a href="#">[+123456789]</a></h3>
   </div>
