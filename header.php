@@ -10,11 +10,26 @@
         <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+        <meta name="key" content="value" />
+        <meta name="keywords" content="keyword1, keyword2" />
+        <meta name="description" content="this is the description of this page" />
+        <?php wp_head(); ?>
+
 
     </head>
     <body>
 
+
       <div class="nav_theme_midnight" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+        <div class="" style="background-color:#000;">
+          <div class="uk-container">
+        <div class="uk-text-right@m uk-text-center">
+          <span> <a style="    padding: 10px;
+    display: -webkit-inline-box;
+    font-size: 15px;" href="<?php the_field('phone_call') ?>"><i class="fas fa-phone-square"></i> | <?php the_field('phone_display') ?> </a> </span>
+        </div>
+          </div>
+        </div>
         <div class="uk-container">
 
           <nav class="" uk-navbar style="position: relative; z-index: 980;">
@@ -27,7 +42,93 @@
               </div>
                 <div class="uk-navbar-right">
 
+                  <?php if( have_rows('head_menu', 'option') ): ?>
+
                     <ul class="uk-navbar-nav">
+
+                      <?php while( have_rows('head_menu', 'option') ): the_row(); ?>
+
+                        <li><a class="nav__link" href="<?php the_sub_field('nav_link'); ?>"><?php the_sub_field('nav_title'); ?></a>
+                          <?php
+
+// check if the flexible content field has rows of data
+if( have_rows('sub_navs') ):?>
+<div class="uk-width-expand nav_theme_midnight" uk-dropdown>
+<div class="uk-dropdown-grid">
+<?php
+
+   // loop through the rows of data
+  while ( have_rows('sub_navs') ) : the_row();
+
+      if( get_row_layout() == 'sub_nav' ):?>
+
+
+
+  <div class="uk-margin-large">
+  <h3><?php the_sub_field('nav_block_title'); ?></h3>
+  <hr>
+  <?php if( have_rows('nav_block')): ?>
+
+    <ul class="uk-nav uk-dropdown-nav uk-child-width-1-4" uk-grid>
+
+    <?php while( have_rows('nav_block') ): the_row(); ?>
+
+      <li class="uk-margin-remove">
+        <a class="nav__link nav__link_type_city uk-button-text" href="<?php the_sub_field('nav_link_url'); ?>">
+           <?php the_sub_field('nav_link_title'); ?></a></li>
+
+    <?php endwhile; ?>
+
+    </ul>
+
+<?php endif; ?>
+</div>
+
+
+
+    <?php  elseif( get_row_layout() == 'download' ):
+
+        $file = get_sub_field('file');
+
+      endif;
+
+  endwhile;
+
+else :
+
+  // no layouts found
+?>
+</div>
+</div>
+<?php
+endif;
+
+?>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                        </li>
+
+
+
+                      <?php endwhile; ?>
+
+                      </ul>
+
+                  <?php endif; ?>
+
+                    <!-- <ul class="uk-navbar-nav">
                       <li><a class="nav__link" href="#">Home</a></li>
                       <li><a class="nav__link" href="#">About</a></li>
                       <li><a class="nav__link" href="#">Services</a></li>
@@ -116,7 +217,11 @@
       </div>
   </div>
                         </li>
-                    </ul>
+                        <li><a class="nav__link" href="#">Services</a></li>
+                        <li><a class="nav__link" href="#">Reviews</a></li>
+                        <li><a class="nav__link" href="#">Contact</a></li>
+
+                    </ul> -->
 
             </div>
 
