@@ -14,6 +14,7 @@
 
 //card
 @import "card/_type/card_type_media";
+@import "card/_type/card_type_form";
 
 //hr
 @import "hr/_theme/hr_theme_sunflower";
@@ -32,3 +33,13 @@
 
 //hero
 @import "hero/__title/hero__title";
+
+//input
+@import "input/input";
+
+//button
+@import "button/_type/button_type_form";
+
+//icon
+@import "icon/_type/icon_type_contactform";
+@import "icon/_type/icon_type_social";

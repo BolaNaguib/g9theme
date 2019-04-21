@@ -3,4 +3,11 @@
   & .icon{
     filter: brightness(0);
   }
+  & .star{
+  color: $color__sunflower;
+  }
+  & .button_type_form{
+    color: #fff;
+    background-color: $color__sunflower;
+  }
 }

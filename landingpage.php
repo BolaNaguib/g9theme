@@ -1,94 +1,48 @@
+<?php /* Template Name: Landing Page Template */ ?>
 <!-- START header -->
 <?php get_header(); ?>
 
 
 
-<section class="section section_theme_white">
-  <div class="uk-container">
-    <div class="uk-child-width-1-2 uk-flex uk-flex-middle" uk-grid>
-<div class="">
-  <h3 class="section__title"> Contact Information </h3>
-  <hr class="hr_type_section hr_theme_sunflower">
-  <ul class="uk-list uk-list-divider">
-    <li> <span class="icon_type_contactform"><i class="fas fa-map-marked-alt"></i></span> <span class="uk-margin-left">Grand Island ,FLorida, USA.</span> </li>
-    <li><span class="icon_type_contactform"><i class="fas fa-envelope-open-text"></i></span>  <span class="uk-margin-left">garagedoorstech@gmail.com</span> </li>
-    <li><span class="icon_type_contactform"><i class="fas fa-headphones"></i></span> <span class="uk-margin-left">(352) 321-9765</span> </li>
-  </ul>
-  <h3 class="section__title"> Follow Us </h3>
-  <hr class="hr_type_section hr_theme_sunflower">
+<?php  ?>
 
-  <ul class="uk-iconnav">
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a> </li>
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-youtube"></i></a> </li>
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-google"></i></a> </li>
-  </ul>
-</div>
-<div class="">
-  <iframe allowfullscreen frameborder=0 height=500 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56082.61702335594!2d-81.76406399506446!3d28.53480300868782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e78ac71fe24735%3A0x372601b856243ecc!2sClermont%2C+FL%2C+USA!5e0!3m2!1sen!2seg!4v1535294365277"
-              style=border:0 width=100%></iframe>
-</div>
-    </div>
+<?php
 
-  </div>
-</section>
+// check if the flexible content field has rows of data
+if( have_rows('landing_page_template') ):
 
-<section class="section section_theme_sunflower">
-  <div class="uk-container">
-    <div class="uk-child-width-1-2 uk-flex uk-flex-middle" uk-grid>
-<div class="">
-  <h3 class="section__title"> Contact Information </h3>
-  <hr class="hr_type_section hr_theme_sunflower">
-  <ul class="uk-list uk-list-divider">
-    <li> <span class="icon_type_contactform"><i class="fas fa-map-marked-alt"></i></span> <span class="uk-margin-left">Grand Island ,FLorida, USA.</span> </li>
-    <li><span class="icon_type_contactform"><i class="fas fa-envelope-open-text"></i></span>  <span class="uk-margin-left">garagedoorstech@gmail.com</span> </li>
-    <li><span class="icon_type_contactform"><i class="fas fa-headphones"></i></span> <span class="uk-margin-left">(352) 321-9765</span> </li>
-  </ul>
-  <h3 class="section__title"> Follow Us </h3>
-  <hr class="hr_type_section ">
+     // loop through the rows of data
+    while ( have_rows('landing_page_template') ) : the_row();
 
-  <ul class="uk-iconnav">
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a> </li>
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-youtube"></i></a> </li>
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-google"></i></a> </li>
-  </ul>
-</div>
-<div class="">
-  <iframe allowfullscreen frameborder=0 height=500 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56082.61702335594!2d-81.76406399506446!3d28.53480300868782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e78ac71fe24735%3A0x372601b856243ecc!2sClermont%2C+FL%2C+USA!5e0!3m2!1sen!2seg!4v1535294365277"
-              style=border:0 width=100%></iframe>
-</div>
-    </div>
+        if( get_row_layout() == 'card' ):
+          get_template_part( 'partials/section', 'card' );
 
-  </div>
-</section>
+        elseif( get_row_layout() == 'cta' ):
+          get_template_part( 'partials/section', 'cta' );
 
-<section class="section section_theme_midnight">
-  <div class="uk-container">
-    <div class="uk-child-width-1-2 uk-flex uk-flex-middle" uk-grid>
-<div class="">
-  <h3 class="section__title"> Contact Information </h3>
-  <hr class="hr_type_section hr_theme_sunflower">
-  <ul class="uk-list uk-list-divider">
-    <li> <span class="icon_type_contactform"><i class="fas fa-map-marked-alt"></i></span> <span class="uk-margin-left">Grand Island ,FLorida, USA.</span> </li>
-    <li><span class="icon_type_contactform"><i class="fas fa-envelope-open-text"></i></span>  <span class="uk-margin-left">garagedoorstech@gmail.com</span> </li>
-    <li><span class="icon_type_contactform"><i class="fas fa-headphones"></i></span> <span class="uk-margin-left">(352) 321-9765</span> </li>
-  </ul>
-  <h3 class="section__title"> Follow Us </h3>
-  <hr class="hr_type_section hr_theme_sunflower">
+        elseif( get_row_layout() == 'quote' ):
+          get_template_part( 'partials/section', 'quote' );
 
-  <ul class="uk-iconnav">
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-facebook-square"></i></a> </li>
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-youtube"></i></a> </li>
-    <li> <a class="icon_type_social" href="#" target="_blank"><i class="fab fa-google"></i></a> </li>
-  </ul>
-</div>
-<div class="">
-  <iframe allowfullscreen frameborder=0 height=500 src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d56082.61702335594!2d-81.76406399506446!3d28.53480300868782!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e78ac71fe24735%3A0x372601b856243ecc!2sClermont%2C+FL%2C+USA!5e0!3m2!1sen!2seg!4v1535294365277"
-              style=border:0 width=100%></iframe>
-</div>
-    </div>
+        elseif( get_row_layout() == 'map' ):
+          get_template_part( 'partials/section', 'map' );
+        elseif( get_row_layout() == 'services' ):
+          get_template_part( 'partials/section', 'service' );
 
-  </div>
-</section>
+
+        endif;
+
+    endwhile;
+
+else :
+
+    // no layouts found
+
+endif;
+
+?>
+
+
+
 
 
 
@@ -127,6 +81,12 @@
   </div>
 </div>
 </section>
+
+
+
+
+
+
 <section class="section section_theme_sunflower">
 <div class="uk-container">
   <div class="uk-child-width-1-2 uk-flex uk-flex-middle" uk-grid>
@@ -476,372 +436,15 @@
     </div>
   </div>
 </section>
-
-<section class="section section_theme_midnight">
-  <div class="uk-container ">
-    <div class="uk-flex uk-flex-middle" uk-grid>
-      <div class="uk-width-1-2">
-        <div class="card_type_media">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/garageone.jpeg" alt="">
-
-        </div>
-
-      </div>
-      <div class="uk-width-1-2">
-        <h3 class="section__title"> Title </h3>
-        <hr class="hr_type_section hr_theme_sunflower">
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<section class="section section_theme_white">
-  <div class="uk-container ">
-    <div class="uk-flex uk-flex-middle" uk-grid>
-      <div class="uk-width-1-2">
-        <h3 class="section__title"> Title </h3>
-        <hr class="hr_type_section hr_theme_sunflower">
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book.</p>
-      </div>
-      <div class="uk-width-1-2">
-        <div class="card_type_media">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/garageone.jpeg" alt="">
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-<section class="section section_theme_sunflower">
-  <div class="uk-container ">
-    <div class="uk-flex uk-flex-middle" uk-grid>
-      <div class="uk-width-1-2">
-        <div class="card_type_media">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/garageone.jpeg" alt="">
-
-        </div>
-
-      </div>
-      <div class="uk-width-1-2">
-        <h3 class="section__title"> Title </h3>
-        <hr class="hr_type_section hr_theme_midnight">
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<section class="section section_theme_white">
-  <div class="uk-container ">
-    <div class="uk-flex uk-flex-middle" uk-grid>
-      <div class="uk-width-1-2">
-        <h3 class="section__title"> Title </h3>
-        <hr class="hr_type_section hr_theme_sunflower">
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book.</p>
-      </div>
-      <div class="uk-width-1-2">
-        <div class="card_type_media">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/garageone.jpeg" alt="">
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="section section_theme_midnight">
-  <div class="uk-container ">
-    <div class="uk-flex uk-flex-middle" uk-grid>
-      <div class="uk-width-1-2">
-        <div class="card_type_media">
-          <img src="<?php echo get_template_directory_uri(); ?>/images/garageone.jpeg" alt="">
-
-        </div>
-
-      </div>
-      <div class="uk-width-1-2">
-        <h3 class="section__title"> Title </h3>
-        <hr class="hr_type_section hr_theme_sunflower">
-        <p> Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type
-          specimen book.</p>
-      </div>
-
-    </div>
-  </div>
-</section>
-<!--
-<section class="section section_theme_midnight">
-  <div class="uk-container">
-    <div class="uk-child-width-1-6 " uk-grid>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon01.png" alt="">
-        <h5>General Maintenance</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon02.png" alt="">
-        <h5>Spring Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon03.png" alt="">
-        <h5>Opener Repair</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon04.png" alt="">
-        <h5>Opener Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon05.png" alt="">
-        <h5>Roller Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon06.png" alt="">
-        <h5>Shifted Door Repair</h5>
-      </div>
-    </div>
-  </div>
-</section> -->
-<section class="section section_theme_white">
-  <div class="uk-container">
-    <div class="uk-child-width-1-6 " uk-grid>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon01.png" alt="">
-        <h5>General Maintenance</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon02.png" alt="">
-        <h5>Spring Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon03.png" alt="">
-        <h5>Opener Repair</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon04.png" alt="">
-        <h5>Opener Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon05.png" alt="">
-        <h5>Roller Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon06.png" alt="">
-        <h5>Shifted Door Repair</h5>
-      </div>
-    </div>
-  </div>
-</section>
-<!-- <section class="section section_theme_sunflower">
-  <div class="uk-container">
-    <div class="uk-child-width-1-6 " uk-grid>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon01.png" alt="">
-        <h5>General Maintenance</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon02.png" alt="">
-        <h5>Spring Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon03.png" alt="">
-        <h5>Opener Repair</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon04.png" alt="">
-        <h5>Opener Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon05.png" alt="">
-        <h5>Roller Replacement</h5>
-      </div>
-      <div class="uk-text-center">
-        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/images/icon06.png" alt="">
-        <h5>Shifted Door Repair</h5>
-      </div>
-    </div>
-  </div>
-</section> -->
-
-
-
-
-<section class="section section_theme_midnight">
-  <div class="uk-container">
-    <div class="uk-child-width-1-3" uk-grid>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-<!-- <section class="section section_theme_sunflower">
-  <div class="uk-container">
-    <div class="uk-child-width-1-3" uk-grid>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-</section> -->
+<!--========================================================================= -->
 
 
 
 
 
-<!-- <section class="section section_theme_white">
-  <div class="uk-container">
-    <div class="uk-child-width-1-3" uk-grid>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-      <div class="uk-text-center">
-        <blockquote cite="#">
-          <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span>The blockquote element represents content that is quoted from another source, optionally with a citation which must be within a footer or cite element. <span uk-icon="icon: quote-right;"></span></p>
-          <footer>Bola Naguib <cite><a href="#">Google.com</a></cite></footer>
-        </blockquote>
-      </div>
-    </div>
-  </div>
-</section> -->
 
-<!-- <section class="section section_theme_midnight">
-  <div class="uk-container uk-text-center">
-    <h3> Get a Free Quote Now from <a href="#"> Garage Doors Tech</a> Or Call <a href="#">[+123456789]</a></h3>
 
-  </div>
-</section>
-<section class="section section_theme_sunflower">
-  <div class="uk-container uk-text-center">
 
-    <h3> Get a Free Quote Now from <a href="#"> Garage Doors Tech</a> Or Call <a href="#">[+123456789]</a></h3>
-  </div>
-</section> -->
-<section class="section section_theme_white">
-  <div class="uk-container uk-text-center">
-
-    <h3> Get a Free Quote Now from <a href="#"> Garage Doors Tech</a> Or Call <a href="#">[+123456789]</a></h3>
-  </div>
-</section>
 <!--
 <section class="section section_theme_midnight">
   <div class="uk-container">
