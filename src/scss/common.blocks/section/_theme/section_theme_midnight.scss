@@ -8,6 +8,10 @@
     color: #fff;
     background-color: $color__sunflower;
   }
+  & .button-type-form{
+    color: #fff;
+    background-color: $color__sunflower;
+  }
 }
 
 @for $i from 1 through length($color__midnight_list_dark) {

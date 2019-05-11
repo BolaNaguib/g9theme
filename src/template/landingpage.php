@@ -14,7 +14,10 @@ if( have_rows('landing_page_template') ):
      // loop through the rows of data
     while ( have_rows('landing_page_template') ) : the_row();
 
-        if( get_row_layout() == 'card' ):
+        if( get_row_layout() == 'hero_block' ):
+          get_template_part( 'partials/section', 'hero' );
+
+        elseif( get_row_layout() == 'card' ):
           get_template_part( 'partials/section', 'card' );
 
         elseif( get_row_layout() == 'cta' ):
@@ -38,6 +41,9 @@ if( have_rows('landing_page_template') ):
           elseif( get_row_layout() == 'value_proposations' ):
             get_template_part( 'partials/section', 'valueproposations' );
 
+            elseif( get_row_layout() == 'content_block' ):
+              get_template_part( 'partials/section', 'content' );
+
         endif;
 
     endwhile;
@@ -49,16 +55,6 @@ else :
 endif;
 
 ?>
-
-
-
-
-
-
-
-
-
-
 
 
 

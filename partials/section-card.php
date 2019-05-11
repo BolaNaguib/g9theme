@@ -1,4 +1,4 @@
-<section class="section section_theme_<?php the_sub_field('card_theme'); ?>">
+<section id="<?php the_sub_field('section_id'); ?>" class="section section_theme_<?php the_sub_field('card_theme'); ?>">
   <div class="uk-container ">
     <div class=" uk-flex uk-flex-middle" uk-grid>
 
@@ -8,9 +8,15 @@
         <p> <?php the_sub_field('card_caption'); ?></p>
       </div>
 
-      <div class="uk-width-1-1 uk-width-1-3@m <?php if( get_sub_field('card_direction')): ?> uk-flex-first <?php endif; ?>">
+      <div class="uk-width-1-1 uk-width-1-3@m uk-flex-last <?php if( get_sub_field('card_direction')): ?> uk-flex-first@m <?php endif; ?>">
         <div class="card_type_media">
-          <img src="<?php the_sub_field('card_media'); ?>" alt="<?php the_title(); ?>" width="100%">
+          <?php
+
+          $image = get_sub_field('card_media');
+          $alt = $image['alt'];
+          if( !empty($image) ): ?>
+          <img src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" width="100%">
+        <?php endif; ?>
 
         </div>
 

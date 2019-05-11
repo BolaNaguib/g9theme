@@ -1,0 +1,25 @@
+.hero_theme_background {
+  padding: 270px 0;
+  color: #fff;
+  background-size: cover;
+  background-position: top;
+  position: relative;
+
+  & * {
+    z-index: 1;
+    position: relative;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    right: 0;
+    bottom: 0;
+    background: #1c1f2a;
+    z-index: 0;
+    opacity: 0.6;
+  }
+}

@@ -1,8 +1,8 @@
 
-<section class="section section_theme_<?php the_sub_field('section_theme'); ?>">
+<section id="<?php the_sub_field('section_id'); ?>" class="section section_theme_<?php the_sub_field('section_theme'); ?>">
   <div class="uk-container">
 
-    <div class="uk-child-width-1-2 uk-flex uk-flex-middle" uk-grid>
+    <div class="uk-child-width-1-2@m uk-child-width-1-1 uk-flex uk-flex-middle" uk-grid>
 
 
 
@@ -31,7 +31,7 @@ if( have_rows('list') ):?>
  	// loop through the rows of data
     while ( have_rows('list') ) : the_row(); ?>
 
-        <li> <span class="icon_type_contactform"><?php the_sub_field('icon'); ?></span> <span class="uk-margin-left"><?php the_sub_field('icon'); ?></span> </li>
+        <li> <span class="icon_type_contactform"><?php the_sub_field('icon'); ?></span> <span class="uk-margin-left"><?php the_sub_field('title'); ?></span> </li>
 
   <?php  endwhile; ?>
   <li><span class="icon_type_contactform"><i class="fas fa-headphones"></i></span> <span class="uk-margin-left">(352) 321-9765</span> </li>

@@ -1,61 +1,66 @@
-
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Title</title>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- UIkit CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
-        <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
-        <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
-        <meta name="key" content="value" />
-        <meta name="keywords" content="keyword1, keyword2" />
-        <meta name="description" content="this is the description of this page" />
-        <?php wp_head(); ?>
+
+<head>
+  <title>Title</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- UIkit CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/css/uikit.min.css" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,700" rel="stylesheet">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/style.css">
+  <meta name="key" content="" />
+  <meta name="title" content=" <?php the_field('meta_title'); ?> " />
+  <meta name="keywords" content=" <?php the_field('meta_keywords'); ?> " />
+  <meta name="description" content=" <?php the_field('meta_description'); ?> " />
+  <?php wp_head(); ?>
 
 
-    </head>
-    <body>
+</head>
+
+<body>
 
 
-      <div class="nav_theme_midnight" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
-        <div class="" style="background-color:#000;">
-          <div class="uk-container">
+  <div class="nav_theme_midnight" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+    <div class="" style="background-color:#000;">
+      <div class="uk-container">
         <div class="uk-text-right@m uk-text-center">
           <span> <a style="    padding: 10px;
     display: -webkit-inline-box;
-    font-size: 15px;" href="<?php the_field('phone_call') ?>"><i class="fas fa-phone-square"></i> | <?php the_field('phone_display') ?> </a> </span>
+    font-size: 15px;" href="<?php the_field('phone_call') ?>"><i class="fas fa-phone-square"></i> |
+              <?php the_field('phone_display') ?> </a> </span>
         </div>
-          </div>
+      </div>
+    </div>
+    <div class="uk-container">
+
+      <nav class="" uk-navbar style="position: relative; z-index: 980;">
+
+        <div class="uk-navbar-left">
+
+
+          <a href="#"> GarageDoorsTech </a>
+
         </div>
-        <div class="uk-container">
+        <div class="uk-navbar-right">
 
-          <nav class="" uk-navbar style="position: relative; z-index: 980;">
+          <?php if( have_rows('head_menu', 'option') ): ?>
 
-              <div class="uk-navbar-left">
+          <ul class="uk-navbar-nav">
 
+            <?php while( have_rows('head_menu', 'option') ): the_row(); ?>
 
-              <a href="#"> GarageDoorsTech </a>
-
-              </div>
-                <div class="uk-navbar-right">
-
-                  <?php if( have_rows('head_menu', 'option') ): ?>
-
-                    <ul class="uk-navbar-nav">
-
-                      <?php while( have_rows('head_menu', 'option') ): the_row(); ?>
-
-                        <li><a class="nav__link" href="<?php the_sub_field('nav_link'); ?>"><?php the_sub_field('nav_title'); ?></a>
-                          <?php
+            <li><a class="nav__link" href="<?php the_sub_field('nav_link'); ?>">
+                <?php the_sub_field('nav_title'); ?></a>
+              <?php
 
 // check if the flexible content field has rows of data
 if( have_rows('sub_navs') ):?>
-<div class="uk-width-expand nav_theme_midnight" uk-dropdown>
-<div class="uk-dropdown-grid">
-<?php
+              <div class="uk-width-expand nav_theme_midnight" uk-dropdown>
+                <div class="uk-dropdown-grid">
+                  <?php
 
    // loop through the rows of data
   while ( have_rows('sub_navs') ) : the_row();
@@ -64,29 +69,31 @@ if( have_rows('sub_navs') ):?>
 
 
 
-  <div class="uk-margin-large">
-  <h3><?php the_sub_field('nav_block_title'); ?></h3>
-  <hr>
-  <?php if( have_rows('nav_block')): ?>
+                  <div class="uk-margin-large">
+                    <h3>
+                      <?php the_sub_field('nav_block_title'); ?>
+                    </h3>
+                    <hr>
+                    <?php if( have_rows('nav_block')): ?>
 
-    <ul class="uk-nav uk-dropdown-nav uk-child-width-1-4" uk-grid>
+                    <ul class="uk-nav uk-dropdown-nav uk-child-width-1-4" uk-grid>
 
-    <?php while( have_rows('nav_block') ): the_row(); ?>
+                      <?php while( have_rows('nav_block') ): the_row(); ?>
 
-      <li class="uk-margin-remove">
-        <a class="nav__link nav__link_type_city uk-button-text" href="<?php the_sub_field('nav_link_url'); ?>">
-           <?php the_sub_field('nav_link_title'); ?></a></li>
+                      <li class="uk-margin-remove">
+                        <a class="nav__link nav__link_type_city uk-button-text" href="<?php the_sub_field('nav_link_url'); ?>">
+                          <?php the_sub_field('nav_link_title'); ?></a></li>
 
-    <?php endwhile; ?>
+                      <?php endwhile; ?>
 
-    </ul>
+                    </ul>
 
-<?php endif; ?>
-</div>
+                    <?php endif; ?>
+                  </div>
 
 
 
-    <?php  elseif( get_row_layout() == 'download' ):
+                  <?php  elseif( get_row_layout() == 'download' ):
 
         $file = get_sub_field('file');
 
@@ -98,9 +105,9 @@ else :
 
   // no layouts found
 ?>
-</div>
-</div>
-<?php
+                </div>
+              </div>
+              <?php
 endif;
 
 ?>
@@ -114,123 +121,25 @@ endif;
 
 
 
+            </li>
 
 
 
+            <?php endwhile; ?>
 
-                        </li>
+          </ul>
 
-
-
-                      <?php endwhile; ?>
-
-                      </ul>
-
-                  <?php endif; ?>
-
-                    <!-- <ul class="uk-navbar-nav">
-                      <li><a class="nav__link" href="#">Home</a></li>
-                      <li><a class="nav__link" href="#">About</a></li>
-                      <li><a class="nav__link" href="#">Services</a></li>
-                      <li><a class="nav__link" href="#">Reviews</a></li>
-                      <li><a class="nav__link" href="#">Contact</a></li>
-                        <li>
-                            <a class="nav__link" href="#">Locations</a>
-                            <div class="uk-width-expand nav_theme_midnight" uk-dropdown>
-      <div class="uk-dropdown-grid">
-
-          <div>
-            <h3>CITIES WE SERVE</h3>
-            <hr>
-              <ul class="uk-nav uk-dropdown-nav uk-child-width-1-4" uk-grid>
-
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#"> lorem ipsum </a></li>
+          <?php endif; ?>
 
 
-
-              </ul>
-              <h3>Counties WE SERVE</h3>
-              <hr>
-              <ul class="uk-nav uk-dropdown-nav uk-child-width-1-4" uk-grid>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-                <li class="uk-margin-remove"><a class="nav__link nav__link_type_city uk-button-text" href="#">Lorem ipsum, Florida </a></li>
-
-              </ul>
-          </div>
-      </div>
-  </div>
-                        </li>
-                        <li><a class="nav__link" href="#">Services</a></li>
-                        <li><a class="nav__link" href="#">Reviews</a></li>
-                        <li><a class="nav__link" href="#">Contact</a></li>
-
-                    </ul> -->
-
-            </div>
-
-          </nav>
         </div>
 
-      </div>
+      </nav>
+    </div>
 
-            <!-- <div class="nav_theme_sunflower" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+  </div>
+
+  <!-- <div class="nav_theme_sunflower" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
               <div class="uk-container">
 
                 <nav class="" uk-navbar style="position: relative; z-index: 980;">
@@ -327,7 +236,7 @@ endif;
 
             </div> -->
 
-                  <!-- <div class="nav_theme_white" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
+  <!-- <div class="nav_theme_white" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
                     <div class="uk-container">
 
                       <nav class="" uk-navbar style="position: relative; z-index: 980;">
@@ -425,15 +334,15 @@ endif;
                   </div> -->
 
 
-                  <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1"
+
+  <!-- <div class="uk-position-relative uk-visible-toggle uk-light " tabindex="-1"
                    uk-slideshow="animation: push; ratio: 5:2" >
 
                       <ul class="uk-slideshow-items ">
                                                   <li class="slider">
                               <img class="" src="<?php echo get_template_directory_uri(); ?>/images/garageone.jpeg" alt="" uk-cover>
                               <div class="uk-position-center uk-position-small uk-text-center" style="z-index:2;">
-                                  <h1 class="hero__title" uk-slideshow-parallax="y: -50,0,0; opacity: 1,1,0">Garage Doors Tech</h1>
-                                  <p uk-slideshow-parallax="y: 50,0,0; opacity: 1,1,0">Thank You Bola For Your Hard Work</p>
+
                               </div>
                           </li>
                           <li class="slider">
@@ -448,4 +357,4 @@ endif;
                       <a class="uk-position-center-left uk-position-small uk-hidden-hover" href="#" uk-slidenav-previous uk-slideshow-item="previous"></a>
                       <a class="uk-position-center-right uk-position-small uk-hidden-hover" href="#" uk-slidenav-next uk-slideshow-item="next"></a>
 
-                  </div>
+                  </div> -->
