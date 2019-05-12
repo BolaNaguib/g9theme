@@ -16,7 +16,7 @@
       <div class="uk-text-center">
         <blockquote cite="#">
           <span><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></span>
-          <p class="uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span><?php the_sub_field('quote_caption'); ?> <span uk-icon="icon: quote-right;"></span></p>
+          <p class=" quotex uk-margin-small-bottom"><span uk-icon="icon: quote-right;"></span><?php the_sub_field('quote_caption'); ?> <span uk-icon="icon: quote-right;"></span></p>
           <footer><?php the_sub_field('quote_author'); ?>, <?php the_field('city'); ?>&nbsp;&nbsp;<cite><a target="_blank" href="<?php the_sub_field('quote_source_url'); ?>"><?php the_sub_field('quote_source_title'); ?></a></cite></footer>
         </blockquote>
       </div>
