@@ -18,8 +18,9 @@
 
           <div class="">
             <div class="uk-card-header">
+              <a target="_blank" style="color: inherit;" href=" <?php the_sub_field('review_url') ?> ">
+
           <div class="uk-grid-small uk-flex-middle" uk-grid>
-<a style="color: inherit;" href=" <?php the_sub_field('review_url') ?> ">
 
          <div class="uk-width-auto">
                   <img class="uk-border-circle" width="60" height="60" src="<?php the_sub_field('review_image'); ?>">
@@ -40,8 +41,8 @@
                     <?php endif; ?>
                   </p>
               </div>
-              </a>
           </div>
+        </a>
 
       </div>
           </div>
