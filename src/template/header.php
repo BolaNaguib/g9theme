@@ -28,7 +28,7 @@
   <div class="nav_theme_midnight" uk-sticky="sel-target: .uk-navbar-container; cls-active: uk-navbar-sticky; bottom: #transparent-sticky-navbar">
     <div class="" style="background-color:#000;">
       <div class="uk-container">
-        <div class="uk-text-right@m uk-text-center">
+        <div class="uk-text-left@m uk-text-center">
           <span> <a style="    padding: 10px;
     display: -webkit-inline-box;
     font-size: 15px;" href="<?php the_field('phone_call') ?>"><i class="fas fa-phone-square"></i> |
