@@ -18,7 +18,15 @@
     color: #1c1f2a;
     box-shadow: 5px 5px 5px 3px #00000069;
     margin: 10px 0px;
-    display: -webkit-inline-box;" href="tel:<?php the_field('phone_call') ?>">        <?php the_field('phone_display', 'option'); ?>
+    display: -webkit-inline-box;" href="tel:<?php if (get_field('phone_call')): ?>
+        <?php the_field('phone_call') ?>
+        <?php else: ?>
+          <?php the_field('phone', 'option'); ?>
+      <?php endif; ?>">    <?php if (get_field('phone_display')): ?>
+        <?php the_field('phone_display') ?>
+        <?php else: ?>
+          <?php the_field('phone_display', 'option'); ?>
+      <?php endif; ?>
 </a>
 <?php else : ?>
 
