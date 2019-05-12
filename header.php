@@ -30,13 +30,13 @@
       <div class="uk-container">
         <div class="uk-text-left@m uk-text-center">
           <span> <a class="top_contact_phone" href="tel:<?php the_field('phone_call') ?>"><i class="fa fa-phone"></i>
-    <?php if( get_field('phone_display') ): ?>
+    <?php if (get_field('phone_display')): ?>
       <?php the_field('phone_display') ?>
       <?php else: ?>
         <?php the_field('phone_display', 'option'); ?>
     <?php endif; ?></a> </span>
     <span  class="top_contact_mail"  ><i class="fas fa-envelope"></i> |
-<?php if( get_field('email') ): ?>
+<?php if (get_field('email')): ?>
 <?php the_field('email') ?>
 <?php else: ?>
   <?php the_field('email', 'option'); ?>
@@ -53,14 +53,21 @@
 
           $image = get_field('logo', 'option');
           $alt = $image['alt'];
-          if( !empty($image) ): ?>
+          if (!empty($image)): ?>
 
           <a href="/"> <img style="max-height: 60px;" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"> </a>
         <?php endif; ?>
 
 
         </div>
-        <?php get_template_part( 'partials/navbar', 'menu' ); ?>
+        <?php if (get_field('lpmenu')): ?>
+          <?php get_template_part('partials/navbar', 'lpmenu'); ?>
+
+	<?php else : ?>
+    <?php get_template_part('partials/navbar', 'menu'); ?>
+
+<?php endif; ?>
+
 
 
 
