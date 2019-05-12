@@ -23,6 +23,11 @@ html {
   }
 
 }
+
+
+.map iframe{
+    width: 100%;
+}
 //navbar
 @import "nav/_theme/nav_theme_midnight";
 @import "nav/_theme/nav_theme_sunflower";

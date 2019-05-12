@@ -121,7 +121,7 @@ endif;
 </div>
 
 
-<div class="">
+<div class="map">
 <?php the_sub_field('map_iframe'); ?>
 </div>
     </div>
