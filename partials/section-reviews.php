@@ -19,7 +19,9 @@
           <div class="">
             <div class="uk-card-header">
           <div class="uk-grid-small uk-flex-middle" uk-grid>
-              <div class="uk-width-auto">
+<a href=" <?php the_sub_field('review_url') ?> ">
+
+         <div class="uk-width-auto">
                   <img class="uk-border-circle" width="60" height="60" src="<?php the_sub_field('review_image'); ?>">
               </div>
               <div class="uk-width-expand">
@@ -38,6 +40,7 @@
                     <?php endif; ?>
                   </p>
               </div>
+              </a>
           </div>
 
       </div>
