@@ -29,18 +29,13 @@
     <div class="" style="background-color:#000;">
       <div class="uk-container">
         <div class="uk-text-left@m uk-text-center">
-          <span> <a style="    padding: 10px;
-    display: -webkit-inline-box;
-    font-size: 15px;" href="<?php the_field('phone_call') ?>"><i class="fas fa-phone-square"></i> |
+          <span> <a class="top_contact_phone" href="<?php the_field('phone_call') ?>"><i class="fa fa-phone"></i> |
     <?php if( get_field('phone_display') ): ?>
       <?php the_field('phone_display') ?>
       <?php else: ?>
         <?php the_field('phone_display', 'option'); ?>
     <?php endif; ?></a> </span>
-    <span style="    padding: 10px;
-display: -webkit-inline-box;
-font-size: 15px;
-color: #ffc600" ><i class="fas fa-envelope"></i> |
+    <span  class="top_contact_mail"  ><i class="fas fa-envelope"></i> |
 <?php if( get_field('email') ): ?>
 <?php the_field('email') ?>
 <?php else: ?>

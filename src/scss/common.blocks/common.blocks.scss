@@ -1,53 +1,61 @@
-html{
+html {
   scroll-behavior: smooth;
 }
+
 .title {
-    width: 100%;
+  width: 100%;
+}
+
+.top_contact_phone {
+  padding: 10px;
+  display: -webkit-inline-box;
+  font-size: 15px;
+}
+
+.top_contact_mail {
+  padding: 10px;
+  display: none;
+  font-size: 15px;
+  color: #ffc600;
+
+  @include mediaquery_size_m() {
+    display: -webkit-inline-box;
   }
 
+}
 //navbar
 @import "nav/_theme/nav_theme_midnight";
 @import "nav/_theme/nav_theme_sunflower";
 @import "nav/_theme/nav_theme_white";
 @import "nav/__link/nav__link";
 @import "nav/__link/_type/nav__link_type_city";
-
 // section
 @import "section/section";
 @import "section/_theme/section_theme_midnight";
 @import "section/_theme/section_theme_sunflower";
 @import "section/_theme/section_theme_white";
 @import "section/__title/section__title";
-
 //card
 @import "card/_type/card_type_media";
 @import "card/_type/card_type_form";
-
 //hr
 @import "hr/_theme/hr_theme_sunflower";
 @import "hr/_theme/hr_theme_midnight";
 @import "hr/_type/hr_type_section";
-
 //blockquote
 @import "blockquote/blockquote";
-
 //footer
 @import "footer/__link/footer__link";
 @import "footer/__link/_type/footer__link_type_city";
-
 //slider
 @import "slider/slider";
-
 //hero
 @import "hero/__title/hero__title";
 @import "hero/_theme/hero_theme_background";
-
 //input
 @import "input/input";
-
 //button
 @import "button/_type/button_type_form";
-
 //icon
 @import "icon/_type/icon_type_contactform";
 @import "icon/_type/icon_type_social";
