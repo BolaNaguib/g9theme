@@ -7,9 +7,16 @@ html {
 }
 
 .top_contact_phone {
-  padding: 10px;
-  display: -webkit-inline-box;
-  font-size: 15px;
+  padding: 25px;
+display: -webkit-inline-box;
+font-size: 25px;
+
+  @include mediaquery_size_m(){
+
+      padding: 10px;
+      display: -webkit-inline-box;
+      font-size: 15px;
+  }
 }
 
 .top_contact_mail {
