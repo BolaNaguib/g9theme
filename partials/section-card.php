@@ -3,7 +3,7 @@
     <div class=" uk-flex uk-flex-middle" uk-grid>
 
       <div class="uk-width-1-1 uk-width-2-3@m">
-        <h3 class="section__title"> <?php the_sub_field('card_title'); ?> , <?php the_field('city'); ?> </h3>
+        <h3 class="section__title"> <?php the_sub_field('card_title'); ?>  <?php the_field('city'); ?> </h3>
         <hr class="hr_type_section <?php if( get_sub_field('card_theme') !== 'sunflower' ): ?> hr_theme_sunflower <?php endif; ?> ">
         <p> <?php the_sub_field('card_caption'); ?></p>
       </div>
