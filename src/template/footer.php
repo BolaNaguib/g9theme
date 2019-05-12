@@ -2,7 +2,7 @@
 
 
 
-<section class="section section_theme_sunflower">
+<section class="section section_theme_midnight">
   <div class="uk-container">
     <?php if( have_rows('top_footer', 'option') ): ?>
       <?php while( have_rows('top_footer', 'option') ): the_row(); ?>

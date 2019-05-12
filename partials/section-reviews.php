@@ -39,6 +39,7 @@
                   </p>
               </div>
           </div>
+
       </div>
           </div>
 
@@ -53,6 +54,47 @@
 
 
 
+    </div>
+
+    <div class="uk-text-center uk-padding">
+          <span style="color:#ffc600" class="rating-desc" itemscope="" itemtype="http://schema.org/<?php if( get_field('schema_organization_type') ): ?>
+          <?php the_field('schema_organization_type') ?>
+          <?php else: ?>
+            <?php the_field('schema_organization_type', 'option'); ?>
+          <?php endif; ?>">
+              <span style="color:#ffc600" itemprop="name">
+                <?php if( get_field('schema_organization_name') ): ?>
+                <?php the_field('schema_organization_name') ?>
+                <?php else: ?>
+                  <?php the_field('schema_organization_name', 'option'); ?>
+                <?php endif; ?>
+              </span>
+            <span itemprop="aggregateRating" itemscope="" itemtype="http://schema.org/AggregateRating">Rated
+             <span itemprop="ratingValue">  <?php if( get_field('rating') ): ?>
+               <?php the_field('rating') ?>
+               <?php else: ?>
+                 <?php the_field('rating', 'option'); ?>
+               <?php endif; ?></span>/  <?php if( get_field('rating_total') ): ?>
+                 <?php the_field('rating_total') ?>
+                 <?php else: ?>
+                   <?php the_field('rating_total', 'option'); ?>
+                 <?php endif; ?> Based On
+             <span itemprop="reviewCount">  <?php if( get_field('rating_based_on') ): ?>
+               <?php the_field('rating_based_on') ?>
+               <?php else: ?>
+                 <?php the_field('rating_based_on', 'option'); ?>
+               <?php endif; ?></span>
+             <a class="ratings" href="  <?php if( get_field('rating_source_url') ): ?>
+               <?php the_field('rating_source_url') ?>
+               <?php else: ?>
+                 <?php the_field('rating_source_url', 'option'); ?>
+               <?php endif; ?>">  <?php if( get_field('rating_source') ): ?>
+                 <?php the_field('rating_source') ?>
+                 <?php else: ?>
+                   <?php the_field('rating_source', 'option'); ?>
+                 <?php endif; ?></a>
+          </span>
+        </span>
     </div>
   </div>
 </section>

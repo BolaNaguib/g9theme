@@ -11,12 +11,12 @@
   <?php
 
   // check if the flexible content field has rows of data
-  if( have_rows('block') ):
+  if (have_rows('block')):
 
        // loop through the rows of data
-      while ( have_rows('block') ) : the_row();
+      while (have_rows('block')) : the_row();
 
-      if( get_row_layout() == 'contact_info' ): ?>
+      if (get_row_layout() == 'contact_info'): ?>
 
 
   <h3 class="section__title"> <?php the_sub_field('block_title'); ?> </h3>
@@ -24,17 +24,43 @@
   <?php
 
 // check if the repeater field has rows of data
-if( have_rows('list') ):?>
+if (have_rows('list')):?>
 <ul class="uk-list uk-list-divider">
 
 <?php
- 	// loop through the rows of data
-    while ( have_rows('list') ) : the_row(); ?>
+    // loop through the rows of data
+    while (have_rows('list')) : the_row(); ?>
 
         <li> <span class="icon_type_contactform"><?php the_sub_field('icon'); ?></span> <span class="uk-margin-left"><?php the_sub_field('title'); ?></span> </li>
 
   <?php  endwhile; ?>
-  <li><span class="icon_type_contactform"><i class="fas fa-headphones"></i></span> <span class="uk-margin-left">(352) 321-9765</span> </li>
+
+  <?php if (get_sub_field('show_default_phone')): ?>
+
+    <li><span class="icon_type_contactform"><i class="fas fa-headphones"></i></span> <span class="uk-margin-left">
+      <?php if( get_field('phone_display') ): ?>
+        <?php the_field('phone_display') ?>
+        <?php else: ?>
+          <?php the_field('phone_display', 'option'); ?>
+      <?php endif; ?>
+    </span> </li>
+  <?php endif; ?>
+
+  <?php if (get_sub_field('show_default_address')): ?>
+    <li><span class="icon_type_contactform">
+      <i class="fas fa-map-marker-alt"></i></span> <span class="uk-margin-left">
+        <?php if( get_field('city') ): ?>
+          <?php the_field('city') ?> , Florida , USA
+          <?php else: ?>
+            <?php the_field('address', 'option'); ?>
+        <?php endif; ?>
+      </span> </li>
+    <?php endif; ?>
+
+  <?php if (get_sub_field('show_default_email')): ?>
+    <li><span class="icon_type_contactform"><i class="fas fa-envelope"></i></span> <span class="uk-margin-left"> <?php the_field('email','option'); ?> </span> </li>
+
+<?php endif; ?>
 </ul>
   <?php else :?>
 
@@ -47,20 +73,20 @@ endif;
 ?>
 
 
-      <?php  elseif( get_row_layout() == 'social_media' ):   ?>
+      <?php  elseif (get_row_layout() == 'social_media'):   ?>
 
         <h3 class="section__title"> <?php the_sub_field('block_title'); ?> </h3>
         <hr class="hr_type_section">
         <?php
 
         // check if the repeater field has rows of data
-        if( have_rows('social') ):?>
+        if (have_rows('social')):?>
         <ul class="uk-iconnav">
 
         <?php
 
-         	// loop through the rows of data
-            while ( have_rows('social') ) : the_row();?>
+             // loop through the rows of data
+            while (have_rows('social')) : the_row();?>
 
               <li> <a class="icon_type_social" href="<?php the_sub_field('link'); ?>" target="_blank"><?php the_sub_field('icon'); ?> </a> </li>
 
