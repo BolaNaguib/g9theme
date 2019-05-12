@@ -9,6 +9,8 @@
 
   <div class="hero hero_theme_background uk-text-center" style="background-image:url('<?php echo $image['url']; ?>');">
       <?php endif; ?>
+      <div class="uk-container">
+
     <h1 class="hero__title"> <?php the_sub_field('hero_title'); ?> </h1>
     <p > <?php the_sub_field('hero_caption'); ?></p>
     <?php if (get_sub_field('call_back_button')): ?>
@@ -28,6 +30,8 @@
           <?php the_field('phone_display', 'option'); ?>
       <?php endif; ?>
 </a>
+</div>
+
 <?php else : ?>
 
 <?php endif; ?>
