@@ -188,4 +188,21 @@ function my_acf_format_value( $value, $post_id, $field ) {
 
 add_filter('acf/format_value/type=textarea', 'do_shortcode');
 
+function wpdocs_dequeue_dashicon() {
+        if (current_user_can( 'update_core' )) {
+            return;
+        }
+        wp_deregister_style('dashicons');
+}
+add_action( 'wp_enqueue_scripts', 'wpdocs_dequeue_dashicon' );
+add_filter( 'wpcf7_load_js', '__return_false' );
+add_filter( 'wpcf7_load_css', '__return_false' );
+function remove_cssjs_ver( $src ) {
+if( strpos( $src, '?ver=' ) )
+ $src = remove_query_arg( 'ver', $src );
+return $src;
+}
+add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
+add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
+
 ?>
