@@ -62,6 +62,7 @@
         </div>
         <?php if (get_field('lpmenu')): ?>
           <?php get_template_part('partials/navbar', 'lpmenu'); ?>
+          xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 
 	<?php else : ?>
     <?php get_template_part('partials/navbar', 'menu'); ?>
