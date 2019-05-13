@@ -36,6 +36,8 @@
                       <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <?php elseif( get_sub_field('review_rating') == 'four' ): ?>
                       <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                    <?php elseif( get_sub_field('review_rating') == 'fourhalf' ): ?>
+                      <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     <?php elseif( get_sub_field('review_rating') == 'five' ): ?>
                       <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                     <?php endif; ?>
