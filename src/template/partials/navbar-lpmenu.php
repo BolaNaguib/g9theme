@@ -47,12 +47,19 @@
 
     <?php endwhile; ?>
 
-                <li><a href="#offcanvas-nav clickopen" class=" button_type_toggle" uk-toggle>
+                <li><a class=" button_type_toggle clickopen uk-visible-m" uk-toggle>
                     <span class="" uk-navbar-toggle-icon>
 
                     </span>
                   </a>
                 </li>
+
+                                <li><a href="#offcanvas-nav" class=" button_type_toggle  uk-hidden-m" uk-toggle>
+                                    <span class="" uk-navbar-toggle-icon>
+
+                                    </span>
+                                  </a>
+                                </li>
   </ul>
 
 <?php endif; ?><!-- END head_menu -->
