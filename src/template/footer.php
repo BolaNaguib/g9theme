@@ -38,7 +38,7 @@
 <?php wp_footer(); ?>
 
 <script type="text/javascript">
-  $(".clickopen").click(function(){
+  $(".clickopen").on('click',(e) => {
     $(".dxd").css('opacity','1');
   });
 </script>
