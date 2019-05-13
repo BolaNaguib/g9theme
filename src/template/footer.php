@@ -40,7 +40,7 @@
 
 <script type="text/javascript">
   $(".clickopen").on('click',(e) => {
-    $(".dxd").css('opacity','1');
+    $(".dxd").css('display','block');
   });
 </script>
 </body>

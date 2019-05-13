@@ -6,7 +6,7 @@
 
     <?php while (have_rows('head_menu', 'option')): the_row(); ?>
 
-      <li class="uk-visible@m dxd " style="opacity:0;"><a class="nav__link" href="<?php the_sub_field('nav_link'); ?>">
+      <li class="uk-visible@m dxd " style="display:none;"><a class="nav__link" href="<?php the_sub_field('nav_link'); ?>">
           <?php the_sub_field('nav_title'); ?></a>
         <?php
           // check if the flexible content field has rows of data
