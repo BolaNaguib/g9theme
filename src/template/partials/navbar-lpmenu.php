@@ -47,14 +47,14 @@
 
     <?php endwhile; ?>
 
-                <li><a class=" button_type_toggle clickopen uk-visible-m" uk-toggle>
+                <li><a class=" button_type_toggle clickopen uk-visible@m" uk-toggle>
                     <span class="" uk-navbar-toggle-icon>
 
                     </span>
                   </a>
                 </li>
 
-                                <li><a href="#offcanvas-nav" class=" button_type_toggle  uk-hidden-m" uk-toggle>
+                                <li><a href="#offcanvas-nav" class=" button_type_toggle  uk-hidden@m" uk-toggle>
                                     <span class="" uk-navbar-toggle-icon>
 
                                     </span>
@@ -70,11 +70,7 @@
 
 
 
-<script type="text/javascript">
-  $(".clickopen").click(function(){
-    $(".dxd").css('opacity','1');
-  })
-</script>
+
 
 
 

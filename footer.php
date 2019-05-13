@@ -37,5 +37,10 @@
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit-icons.min.js"></script>
 <?php wp_footer(); ?>
 
+<script type="text/javascript">
+  $(".clickopen").click(function(){
+    $(".dxd").css('opacity','1');
+  });
+</script>
 </body>
 </html>
