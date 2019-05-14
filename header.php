@@ -40,7 +40,7 @@
       <?php else: ?>
         <?php the_field('phone_display', 'option'); ?>
     <?php endif; ?></a> </span>
-    <span  class="top_contact_mail"  ><i class="fas fa-envelope"></i>
+    <span  class="top_contact_mail"  ><i class="fas fa-envelope"></i> 
 <?php if (get_field('email')): ?>
 <?php the_field('email') ?>
 <?php else: ?>
@@ -51,7 +51,7 @@
     </div>
     <div class="uk-container">
 
-      <nav class="eee" uk-navbar style="position: relative; z-index: 980;">
+      <nav class="" uk-navbar style="position: relative; z-index: 980;">
 
         <div class="uk-navbar-left">
           <?php

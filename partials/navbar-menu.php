@@ -36,37 +36,6 @@
 
 
 
-<div class="boundary-align uk-panel uk-placeholder">
-
-
-    <div uk-drop="pos: bottom-justify; boundary: .eee; eee: true">
-      <?php wp_nav_menu([
-               'theme_location'  => '',
-                 'menu'            => '',
-                 'container'       => '',
-                 'container_class' => '',
-                 'container_id'    => '',
-                 'menu_class'      => '',
-                 'menu_id'         => '',
-                 'echo'            => true,
-                 'fallback_cb'     => '',
-                 'before'          => '',
-                 'after'           => '',
-                 'link_before'     => '',
-                 'link_after'      => '',
-                 'items_wrap'      => '<ul id="%1$s" class="%2$s uk-navbar-nav">%3$s</ul>',
-                 'depth'           => 0,
-                 'walker'          => new Bootstrap_Walker_Menu_Nav(),
-
-               ]); ?>
-
-
-
-
-
-    </div>
-        <div class="uk-card uk-card-body uk-card-default">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt.</div>
-    </div>
 
 
 
