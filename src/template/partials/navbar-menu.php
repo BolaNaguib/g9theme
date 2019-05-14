@@ -25,7 +25,7 @@
 
   <ul class="uk-navbar-nav uk-inline">
 
-  <li><a style="background:transparent;" type="button" href="#offcanvas-nav" class=" button_type_toggle  uk-hidden@m" uk-toggle>
+  <li><a  href="#offcanvas-nav" class=" button_type_toggle  uk-hidden@m" uk-toggle>
       <span class="" uk-navbar-toggle-icon>
 
       </span>
@@ -47,7 +47,7 @@
                  'link_after'      => '',
                  'items_wrap'      => '<ul id="%1$s" class="%2$s uk-navbar-nav">%3$s</ul>',
                  'depth'           => 0,
-                 'walker'          => new Bootstrap_Walker_Menu_Nav(),
+                 'walker'          => new Bootstrap_Walker_Menu_Mobile(),
 
                ]); ?>
 
