@@ -30,7 +30,7 @@
 
       </span>
     </a>
-    <div uk-dropdown="mode: click">
+    <div uk-dropdown="mode: click" class="nav_theme_midnight uk-padding-small">
       <?php wp_nav_menu([
                'theme_location'  => '',
                  'menu'            => '',
