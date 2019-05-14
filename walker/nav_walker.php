@@ -37,7 +37,7 @@
 			$item_output = '<div class="dropdown-divider"></div>';
 		} else {
 			if ($depth == 0) {
-				$class_names = 'nav__link';
+				$class_names = 'nav__linkxx';
 				if ($has_children) $class_names .= ' dropdown-toggle';
 			} else {
 				$class_names = 'dropdown-item';
