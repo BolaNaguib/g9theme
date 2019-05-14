@@ -23,11 +23,12 @@
 
 
 
-<ul>
-  <li>
-    <a class="button_type_toggle  uk-hidden@m" type="button"><span class="" uk-navbar-toggle-icon>
+  <ul class="uk-navbar-nav"> 
+  <li><a href="#offcanvas-nav" class=" button_type_toggle  uk-hidden@m" uk-toggle>
+      <span class="" uk-navbar-toggle-icon>
 
-    </span></a>
+      </span>
+    </a>
   </li>
 </ul>
 </div>
