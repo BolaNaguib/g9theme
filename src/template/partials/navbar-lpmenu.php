@@ -13,7 +13,7 @@
              'after'           => '',
              'link_before'     => '',
              'link_after'      => '',
-             'items_wrap'      => '<ul id="%1$s" class="%2$s uk-navbar-nav dxd" style="display: -webkit-inline-box;">%3$s</ul>',
+             'items_wrap'      => '<ul id="%1$s" class="%2$s uk-navbar-nav dxd" style="display: none;">%3$s</ul>',
              'depth'           => 0,
              'walker'          => new Bootstrap_Walker_Menu_Nav(),
 

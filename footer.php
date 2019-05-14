@@ -52,7 +52,7 @@
 
 <script type="text/javascript">
   $(".clickopen").on('click',(e) => {
-    $(".dxd").css('display','block');
+    $(".dxd").css('display','-webkit-inline-box;');
   });
 </script>
 </body>
