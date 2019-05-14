@@ -1,7 +1,9 @@
 
 
 
-
+<section style="background-color:#000; padding:2px 0px;">
+  
+</section>
 <section id="footer" class="section section_theme_midnight">
   <div class="uk-container">
     <?php if( have_rows('top_footer', 'option') ): ?>
