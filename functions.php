@@ -137,7 +137,7 @@ if( function_exists('acf_add_options_page') ) {
 			$output .= '<' . ($use_li ? 'li' : 'span');
 			if (!empty($id)) $output .= ' id="' . $id . '"';
 			if (!empty($class_names)) $output .= ' class="' . $class_names . '"';
-			$output .= 'class="uk-parent">';
+			$output .= ' ''class="uk-parent">';
 		} else {
 			$has_children = false;
 		}
