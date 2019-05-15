@@ -25,12 +25,7 @@
   </a>
 </li>
 
-                <li><a href="#offcanvas-nav" class=" button_type_toggle  uk-hidden@m" uk-toggle>
-                    <span class="" uk-navbar-toggle-icon>
-
-                    </span>
-                  </a>
-                </li>
+        
            </ul>
 
 
