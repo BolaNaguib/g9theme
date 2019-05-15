@@ -3,8 +3,8 @@
 <div class="uk-container">
   <div class="uk-child-width-1-2@m uk-child-width-1-1 uk-flex uk-flex-middle" uk-grid>
     <div class="">
-      <h3 class="section__title uk-text-right@m uk-text-center"> <?php the_sub_field('card_title'); ?> </h3>
-      <div class=" uk-text-left@m uk-text-center">
+      <h3 class="section__title"> <?php the_sub_field('card_title'); ?> </h3>
+      <div class=" uk-text-left">
         <hr class="hr_type_section <?php if( get_sub_field('section_theme') !== 'sunflower' ): ?> hr_theme_sunflower <?php endif; ?> ">
 
       </div>
