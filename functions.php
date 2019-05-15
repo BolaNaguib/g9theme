@@ -137,7 +137,7 @@ if( function_exists('acf_add_options_page') ) {
 			$output .= '<' . ($use_li ? 'li' : 'span');
 			if (!empty($id)) $output .= ' id="' . $id . '"';
 			if (!empty($class_names)) $output .= ' class=" testing ' . $class_names . '"';
-			$output .= ' class="uk-parent">';
+			$output .= ' class="">';
 		} else {
 			$has_children = false;
 		}
@@ -149,7 +149,7 @@ if( function_exists('acf_add_options_page') ) {
 				$class_names = 'navbar__link '; // Primary navbar class
 				if ($has_children) $class_names .= ' dropdown-toggle';
 			} else {
-				$class_names = 'navbar__link uk-display-block';
+				$class_names = 'navbar__link uk-display-block childx';
 				if ($is_active) $class_names .= ' text-primary';
 			}
 			if ($is_active) $class_names .= ' active';  // AAAAAAAAAA
