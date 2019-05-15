@@ -136,7 +136,7 @@ if( function_exists('acf_add_options_page') ) {
 			$use_li = !( stripos($args->items_wrap, '<ul') === false );
 			$output .= '<' . ($use_li ? 'li' : 'span');
 			if (!empty($id)) $output .= ' id="' . $id . '"';
-			if (!empty($class_names)) $output .= ' class="' . $class_names . '"';
+			if (!empty($class_names)) $output .= ' class=" testing' . $class_names . '"';
 			$output .= ' ''class="uk-parent">';
 		} else {
 			$has_children = false;
