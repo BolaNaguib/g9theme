@@ -115,7 +115,7 @@ if( function_exists('acf_add_options_page') ) {
 	// var $tree_type = array( 'post_type', 'taxonomy', 'custom' );
 	// var $db_fields = array( 'parent' => 'menu_item_parent', 'id' => 'db_id' );
 	function start_lvl( &$output, $depth = 0, $args = array() ) {
-		if ($depth == 0) $output .= '<div class="uk-navbar-dropdown nav_theme_midnight"><ul class="uk-nav uk-navbar-dropdown-nav">';
+		if ($depth == 0) $output .= '<div class="uk-navbar-dropdown nav_theme_midnight"  uk-drop="boundary: !nav; boundary-align: true; pos: bottom-justify;"><ul class="uk-nav uk-navbar-dropdown-nav">';
 	}
 	function end_lvl( &$output, $depth = 0, $args = array() ) {
 		if ($depth == 0) $output .= '</ul></div>';
