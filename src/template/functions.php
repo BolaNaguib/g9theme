@@ -149,7 +149,7 @@ if( function_exists('acf_add_options_page') ) {
 				$class_names = 'navbar__link '; // Primary navbar class
 				if ($has_children) $class_names .= ' dropdown-toggle';
 			} else {
-				$class_names = 'dropdown-item';
+				$class_names = 'navbar__link';
 				if ($is_active) $class_names .= ' text-primary';
 			}
 			if ($is_active) $class_names .= ' active';  // AAAAAAAAAA
