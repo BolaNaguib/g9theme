@@ -59,7 +59,7 @@
   });
 </script>
 <script type="text/javascript">
-  $(".childx").parent().parent().addClass(".uk-parent");
+  $(".childx").parent().parent().addClass("uk-parent");
 </script>
 </body>
 </html>
