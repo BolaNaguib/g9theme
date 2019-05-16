@@ -62,7 +62,7 @@
   $(".childx").parent().parent().addClass("uk-parent");
 </script>
 <script type="text/javascript">
-$(".wpcf7-submit").on('submit',(e) => {
+$(".wpcf7").on('submit',(e) => {
 
   window.location.href="http://wp.elfou2ad-2est.com/thank-you/";
   console.log(" REDIRECTING");
