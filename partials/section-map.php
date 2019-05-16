@@ -77,7 +77,46 @@ endif;
 
         <h3 class="section__title"> <?php the_sub_field('block_title'); ?> </h3>
         <hr class="hr_type_section">
+        <ul class="uk-iconnav">
+          <?php if (get_sub_field('show_facebook')): ?>
+
+          <li>
+             <a class="icon_type_social" href="<?php the_field('facebook', 'option'); ?>" target="_blank">
+              <i class="fab fa-facebook-square"></i>
+              </a>
+             </li>
+        <?php endif; ?>
+        <?php if (get_sub_field('show_youtube')): ?>
+
+        <li>
+           <a class="icon_type_social" href="<?php the_field('youtube', 'option'); ?>" target="_blank">
+            <i class="fab fa-youtube"></i>
+            </a>
+           </li>
+      <?php endif; ?>
+
+    <?php if (get_sub_field('show_twitter')): ?>
+
+    <li>
+       <a class="icon_type_social" href="<?php the_field('twitter', 'option'); ?>" target="_blank">
+        <i class="fab fa-twitter-square"></i>
+        </a>
+       </li>
+  <?php endif; ?>
+  <?php if (get_sub_field('show_google')): ?>
+
+  <li>
+     <a class="icon_type_social" href="<?php the_field('google', 'option'); ?>" target="_blank">
+      <i class="fab fa-google"></i>
+      </a>
+     </li>
+<?php endif; ?>
+          </ul>
+
+
+
         <?php
+
 
         // check if the repeater field has rows of data
         if (have_rows('social')):?>
