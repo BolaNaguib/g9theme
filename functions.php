@@ -27,10 +27,6 @@ if( function_exists('acf_add_options_page') ) {
 
 }
 
-
-?>
-
-<?php
 /**
  * menu-walker.php
  */
@@ -100,14 +96,8 @@ if( function_exists('acf_add_options_page') ) {
 			}
 		}
 	}
-}?>
+}
 
-
-
-
-<!-- mobile version -->
-
-<?php
 /**
  * menu-walker.php
  */
@@ -208,5 +198,4 @@ return $src;
 }
 add_filter( 'style_loader_src', 'remove_cssjs_ver', 10, 2 );
 add_filter( 'script_loader_src', 'remove_cssjs_ver', 10, 2 );
-
 ?>
