@@ -81,7 +81,7 @@ endif;
           <?php if (get_sub_field('show_facebook')): ?>
 
           <li>
-             <a class="icon_type_social" href="<?php the_field('facebook', 'option'); ?>" target="_blank">
+             <a class="icon_type_social" style="color: #3b5998 !important;"> href="<?php the_field('facebook', 'option'); ?>" target="_blank">
               <i class="fab fa-facebook-square"></i>
               </a>
              </li>
@@ -89,7 +89,7 @@ endif;
         <?php if (get_sub_field('show_youtube')): ?>
 
         <li>
-           <a class="icon_type_social" href="<?php the_field('youtube', 'option'); ?>" target="_blank">
+           <a class="icon_type_social" style="color: #ff0000 !important;" href="<?php the_field('youtube', 'option'); ?>" target="_blank">
             <i class="fab fa-youtube"></i>
             </a>
            </li>
@@ -98,7 +98,7 @@ endif;
     <?php if (get_sub_field('show_twitter')): ?>
 
     <li>
-       <a class="icon_type_social" href="<?php the_field('twitter', 'option'); ?>" target="_blank">
+       <a class="icon_type_social" style="color: #259dec !important;" href="<?php the_field('twitter', 'option'); ?>" target="_blank">
         <i class="fab fa-twitter-square"></i>
         </a>
        </li>
@@ -106,7 +106,7 @@ endif;
   <?php if (get_sub_field('show_google')): ?>
 
   <li>
-     <a class="icon_type_social" href="<?php the_field('google', 'option'); ?>" target="_blank">
+     <a class="icon_type_social" style="color: #f4b703 !important;" href="<?php the_field('google', 'option'); ?>" target="_blank">
       <i class="fab fa-google"></i>
       </a>
      </li>

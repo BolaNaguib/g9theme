@@ -35,14 +35,14 @@
 <section style="background-color:#000; padding:2px 0px;">
 
 </section>
-<section class="uk-section section_theme_midnight">
+<section class="uk-padding-small uk-padding-remove-horizontal	 section_theme_midnight">
   <div class="uk-container">
     <div class="uk-child-width-1-2@m uk-child-width-1-1" uk-grid>
       <div class="uk-text-left@m uk-text-center">
         © 2019 Garage Doors Tech LLC
       </div>
       <div class="uk-text-right@m uk-text-center">
-        Made with  <i style="color:red" class="fas fa-heart"></i> By <a target="_blank" href="vxvlabs.com"> <img alt="vxvlabx" height="100" src=" <?php echo get_template_directory_uri(); ?>/images/vxvlogo.png" /></a>
+        Made with  <i style="color:red" class="fas fa-heart"></i> By <a target="_blank" href="bolanaguib.com"> Bolanaguib.com</a>
       </div>
     </div>
   </div>
