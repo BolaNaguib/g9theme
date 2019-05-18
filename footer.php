@@ -35,7 +35,10 @@
 
 <section class="uk-padding-small uk-padding-remove-horizontal	 section_theme_midnight">
   <div class="uk-container">
-    <div class="uk-child-width-1-2@m uk-child-width-1-1" uk-grid>
+    <hr class=" hr_theme_sunflower" style="
+        border: 1px solid;
+        border-radius: 20px;
+    ">    <div class="uk-child-width-1-2@m uk-child-width-1-1 uk-flex uk-flex-middle" uk-grid>
       <div class="">
         <div class="uk-text-left@m uk-text-center">
           © 2019 Garage Doors Tech LLC
@@ -46,7 +49,7 @@
       </div>
 
       <div class="uk-text-right@m uk-text-center">
-        <img height="30px" src=" <?php echo get_template_directory_uri(); ?>/images/credit-card-icons.png " alt="">
+        <img style="height:30px"src=" <?php echo get_template_directory_uri(); ?>/images/credit-card-icons.png " alt="">
       </div>
 
     </div>
