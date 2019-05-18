@@ -18,7 +18,6 @@
   <meta name="description" content=" <?php the_field('meta_description'); ?> " />
   <?php the_field('header_js_general', 'option'); ?>
   <?php the_field('header_js'); ?>
-  
   <?php wp_head(); ?>
 
 </head>
@@ -61,7 +60,11 @@
           $image = get_field('logo', 'option');
           $alt = $image['alt'];
           if (!empty($image)): ?>
-
+          <?php if (get_field('lpmenu')): ?>
+<a>
+  <?php else : ?>
+<a href="/">
+        <?php endif; ?>
           <a href="/"> <img style="max-height: 60px;" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"> </a>
         <?php endif; ?>
 
