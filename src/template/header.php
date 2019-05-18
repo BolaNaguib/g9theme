@@ -16,10 +16,10 @@
   <meta name="title" content=" <?php the_field('meta_title'); ?> " />
   <meta name="keywords" content=" <?php the_field('meta_keywords'); ?> " />
   <meta name="description" content=" <?php the_field('meta_description'); ?> " />
-
-  <?php wp_head(); ?>
   <?php the_field('header_js_general', 'option'); ?>
   <?php the_field('header_js'); ?>
+  <?php wp_head(); ?>
+
 </head>
 
 <body>
