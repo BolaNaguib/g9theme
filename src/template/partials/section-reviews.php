@@ -63,11 +63,7 @@
     </div>
 
     <div class="uk-text-center uk-padding">
-          <span style="color:#ffc600" class="rating-desc" itemscope="" itemtype="http://schema.org/<?php if( get_field('schema_organization_type') ): ?>
-          <?php the_field('schema_organization_type') ?>
-          <?php else: ?>
-            <?php the_field('schema_organization_type', 'option'); ?>
-          <?php endif; ?>">
+          <span style="color:#ffc600" class="rating-desc" itemscope="" itemtype="http://schema.org/Organization
               <span style="color:#ffc600" itemprop="name">
                 <?php if( get_field('schema_organization_name') ): ?>
                 <?php the_field('schema_organization_name') ?>
