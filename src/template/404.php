@@ -1,4 +1,4 @@
-<?php /* Template Name: Landing Page Template */ ?>
+<?php /* Template Name: 404 Template */ ?>
 <!-- START header -->
 <?php get_header(); ?>
 
