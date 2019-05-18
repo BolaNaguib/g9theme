@@ -61,11 +61,10 @@
           $alt = $image['alt'];
           if (!empty($image)): ?>
           <?php if (get_field('lpmenu')): ?>
-<a>
+             <img style="max-height: 60px;" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
   <?php else : ?>
-<a href="/">
+    <a href="/"> <img style="max-height: 60px;" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"> </a>
         <?php endif; ?>
-          <a href="/"> <img style="max-height: 60px;" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>"> </a>
         <?php endif; ?>
 
 
