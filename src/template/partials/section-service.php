@@ -7,7 +7,7 @@ if( have_rows('service') ):
  	// loop through the rows of data
     while ( have_rows('service') ) : the_row();?>
       <div class="uk-text-center">
-        <a href="<?php the_sub_field('url'); ?>" style="color:inherit !important;">
+        <a href="<?php the_sub_field('url'); ?>" style="color:inherit !important;" uk-scroll="offset: 500">
         <?php
 
         $image = get_sub_field('service_icon');
