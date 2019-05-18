@@ -16,9 +16,9 @@ if( have_rows('service') ):
         <img class="icon" src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>">
       <?php endif; ?>
 
-        <h5>
+        <h6 class="uk-margin-top">
           <?php the_sub_field('service_title'); ?>
-        </h5>
+        </h6>
         </a>
       </div>
       <?php
