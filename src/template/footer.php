@@ -37,9 +37,12 @@
 </section>
 <section class="uk-padding-small uk-padding-remove-horizontal	 section_theme_midnight">
   <div class="uk-container">
-    <div class="uk-child-width-1-2@m uk-child-width-1-1" uk-grid>
+    <div class="uk-child-width-1-3@m uk-child-width-1-1" uk-grid>
       <div class="uk-text-left@m uk-text-center">
         © 2019 Garage Doors Tech LLC
+      </div>
+      <div class="uk-text-center">
+        <img src=" <?php echo get_template_directory_uri(); ?>/images/credit-card-icons.png " alt="">
       </div>
       <div class="uk-text-right@m uk-text-center">
         Made with  <i style="color:red" class="fas fa-heart"></i> By <a target="_blank" href="bolanaguib.com"> Bolanaguib.com</a>
