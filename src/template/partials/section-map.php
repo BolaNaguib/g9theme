@@ -81,7 +81,7 @@ endif;
           <?php if (get_sub_field('show_facebook')): ?>
 
           <li>
-             <a class="icon_type_social" style="color: #3b5998 !important;"> href="<?php the_field('facebook', 'option'); ?>" target="_blank">
+             <a class="icon_type_social" style="color: #3b5998 !important;" href="<?php the_field('facebook', 'option'); ?>" target="_blank">
               <i class="fab fa-facebook-square"></i>
               </a>
              </li>

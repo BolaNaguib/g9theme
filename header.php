@@ -19,8 +19,6 @@
 
   <?php wp_head(); ?>
   <?php the_field('header_js_general', 'option'); ?>
-  <!-- Global site tag (gtag.js) - Google Ads: 803502113 --> <script async src="https://www.googletagmanager.com/gtag/js?id=AW-803502113"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'AW-803502113'); </script>
-<script> gtag('config', 'AW-803502113/dWF3CJ-J5oQBEKHwkf8C', { 'phone_conversion_number': '(813) 344-1766' }); </script>
   <?php the_field('header_js'); ?>
 </head>
 
