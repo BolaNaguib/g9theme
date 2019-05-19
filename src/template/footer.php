@@ -9,7 +9,7 @@
 
       <h3> <?php the_sub_field('block_title'); ?> </h3>
       <hr>
-      <div class="uk-child-width-1-4" uk-grid>
+      <div class="uk-child-width-1-4@m uk-child-width-1-2" uk-grid>
 
         <?php if( have_rows('link')): ?>
           <?php while( have_rows('link')): the_row(); ?>
