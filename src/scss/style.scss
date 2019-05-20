@@ -12,7 +12,7 @@
 // Common Variables
 // @import "uikit.min.scss";
 .row{
-  width:100%;
+  width:100% !important;
 }
 @import "common.mixins/common.mixins";
 @import "common.variables/common.variables";
