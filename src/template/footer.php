@@ -48,7 +48,7 @@
         </div>
         <style media="screen">
           .copyrightlogo{
-            height: 30px;
+            height: 20px;
 margin: 10px 10px;
 opacity: 0.5;
 transition: 300ms;
