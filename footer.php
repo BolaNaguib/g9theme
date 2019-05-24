@@ -44,7 +44,7 @@
           © 2019 Garage Doors Tech LLC
         </div>
         <div class="uk-text-left@m uk-text-center">
-          Made with  <i style="color:red" class="fas fa-heart"></i> By <a target="_blank" href="bolanaguib.com"> Bolanaguib.com</a>
+          Made with  <i style="color:red" class="fas fa-heart"></i> By <a target="_blank" href="www.xvxlabs.com"> <img src="<?php echo get_template_directory_uri(); ?>/images/xvxlablogo.png" alt="xvxlabs"> </a>
         </div>
       </div>
 
