@@ -3,16 +3,16 @@
 
 <section id="footer" class="section section_theme_midnight">
   <div class="uk-container">
-    <?php if( have_rows('top_footer', 'option') ): ?>
-      <?php while( have_rows('top_footer', 'option') ): the_row(); ?>
+    <?php if (have_rows('top_footer', 'option')): ?>
+      <?php while (have_rows('top_footer', 'option')): the_row(); ?>
         <div class="uk-margin-large">
 
       <h3> <?php the_sub_field('block_title'); ?> </h3>
       <hr>
       <div class="uk-child-width-1-4@m uk-child-width-1-2" uk-grid>
 
-        <?php if( have_rows('link')): ?>
-          <?php while( have_rows('link')): the_row(); ?>
+        <?php if (have_rows('link')): ?>
+          <?php while (have_rows('link')): the_row(); ?>
           <li class="uk-margin-remove">
             <a class="footer__link footer__link_type_city uk-button-text"
              href="<?php the_sub_field('link_url'); ?>">
@@ -44,8 +44,21 @@
           © 2019 Garage Doors Tech LLC
         </div>
         <div class="uk-text-left@m uk-text-center">
-          Made with  <i style="color:red" class="fas fa-heart"></i> By <a target="_blank" href="www.xvxlabs.com"> <img src="<?php echo get_template_directory_uri(); ?>/images/xvxlablogo.png" alt="xvxlabs"> </a>
+          Made with  <i style="color:red" class="fas fa-heart"></i> By <a target="_blank" href="www.xvxlabs.com"> <img class="copyrightlogo" alt="xvxlabs"  uk-tooltip="title:xvxlabs; pos: right" src="<?php echo get_template_directory_uri(); ?>/images/xvxlablogo.png" alt="xvxlabs"> </a>
         </div>
+        <style media="screen">
+          .copyrightlogo{
+            height: 30px;
+margin: 10px 10px;
+opacity: 0.5;
+transition: 300ms;
+
+          }
+          .copyrightlogo:hover {
+            opacity: 1;
+            transition: 300ms;
+          }
+        </style>
       </div>
 
       <div class="uk-text-right@m uk-text-center">
