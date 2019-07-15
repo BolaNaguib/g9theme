@@ -1,6 +1,5 @@
 
 
-
 <section id="footer" class="section section_theme_midnight">
   <div class="uk-container">
     <?php if (have_rows('top_footer', 'option')): ?>
@@ -68,6 +67,7 @@ transition: 300ms;
     </div>
   </div>
 </section>
+<h3 class="uk-hidden" id="citynamex" title="<?php the_field(city); ?>"><?php the_field(city); ?></h3>
 <!-- UIkit JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 <script async src="https://cdnjs.cloudflare.com/ajax/libs/uikit/3.0.3/js/uikit.min.js"></script>
@@ -81,6 +81,11 @@ transition: 300ms;
 </script>
 <script type="text/javascript">
   $(".childx").parent().parent().addClass("uk-parent");
+</script>
+<script>
+	let $cityx = $("#citynamex").attr( "title" );
+	$("#cityname").val($cityx);
+	console.log("CITYX = " + $cityx )
 </script>
 
 </body>
